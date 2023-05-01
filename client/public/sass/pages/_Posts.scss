@@ -1,0 +1,22 @@
+.posts{
+    margin-top: 2em;
+    h1{
+        @include titleText(1em);
+    }
+    ul{
+        margin-top: .5em;
+        list-style-type: none;
+        li{
+            font-size: .9em;
+            a{
+                $colors: #c9cacc;
+                text-decoration: none;
+                color: $colors;
+                @include aTemplate($colors);
+            }
+            span{
+                color: #666;
+            }
+        }
+    }
+}

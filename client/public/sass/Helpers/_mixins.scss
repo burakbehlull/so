@@ -21,3 +21,19 @@
     font-size: $size;
     color: #c9cacc;
 }
+
+@mixin aTemplate($btcColor){
+    border-bottom-width: 1px;
+    border-bottom-color: $btcColor;
+    border-bottom-style: solid;
+
+    &:visited{
+        cursor: pointer;
+        border-color: #1d1f21;
+    }
+
+    &:hover{
+        cursor: pointer;
+        border-color: #db7093;
+    }
+}
