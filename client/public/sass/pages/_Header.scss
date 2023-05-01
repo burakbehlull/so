@@ -1,0 +1,12 @@
+header{
+    
+    h1{
+        @include titleText(1.8em);
+    }
+    h2{
+        margin-top: 0.6em;
+        font-weight: 600;
+        font-size: .7em;
+        color: #666;
+    }
+}

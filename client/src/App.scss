@@ -2,18 +2,16 @@
 @import '../public/sass/Helpers/variables';
 @import '../public/sass/Helpers/mixins';
 
-
 html{
     background-color: $bodyColor;
-
+    font-family: 'Oxygen Mono';
 }
-
 
 .App{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 3.5em;
+    padding-top: 3em;
     @import '../public/sass/pages/windowBox';
 }
 

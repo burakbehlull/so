@@ -3,4 +3,11 @@
     width: 75vw;
     height: 83vh;
     @import 'Navbar';
+    main{
+        padding: 6px 30px;
+        @import 'Header';
+        @import 'About';
+    }
+
+
 }

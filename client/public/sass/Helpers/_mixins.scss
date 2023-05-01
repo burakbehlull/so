@@ -2,10 +2,22 @@
     border-radius: 20px;
     background: $color;
     width: 10px;
-    height: 11px;
+    height: 10px;
     -webkit-transition: all 500ms ease;
     &:hover{
         padding: 9px;
         cursor: pointer;
     }
+}
+
+@mixin titleText($size){
+    font-size: $size;
+    color: #2bbc8a;
+}
+
+@mixin text($size, $mt){
+    margin-top: $mt;
+    letter-spacing: 1px;
+    font-size: $size;
+    color: #c9cacc;
 }

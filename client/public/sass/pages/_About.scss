@@ -1,0 +1,30 @@
+.about{
+    margin-top: 3em;
+    h1{
+        @include titleText(1em);
+    }
+    p{
+        @include text(.7em, 1em);
+        max-width: 500px;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+
+            border-bottom-width: 1px;
+            border-bottom-color: white;
+            border-bottom-style: solid;
+
+            &:visited{
+                cursor: pointer;
+                border-color: #1d1f21;
+            }
+            
+            &:hover{
+                cursor: pointer;
+                border-color: #db7093;
+            }
+
+        }
+    }
+}
