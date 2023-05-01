@@ -1,0 +1,11 @@
+@mixin navBtn($color){
+    border-radius: 20px;
+    background: $color;
+    width: 10px;
+    height: 11px;
+    -webkit-transition: all 500ms ease;
+    &:hover{
+        padding: 9px;
+        cursor: pointer;
+    }
+}

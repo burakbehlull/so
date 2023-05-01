@@ -1,0 +1,19 @@
+nav{
+    ul{
+        display: flex;
+        list-style-type: none;
+        padding: 14px;
+        gap: 10px;
+        li{
+            &:nth-child(1){
+                @include navBtn(#FA5B55);
+            }
+            &:nth-child(2){
+                @include navBtn(#FCBE2D);
+            }
+            &:nth-child(3){
+                @include navBtn(#22CE3A);
+            }
+        }
+    }
+}

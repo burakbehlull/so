@@ -1,0 +1,6 @@
+.windowBox{
+    background-color: $boxColor;
+    width: 75vw;
+    height: 83vh;
+    @import 'Navbar';
+}
