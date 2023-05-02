@@ -2,37 +2,36 @@ const express = require('express')
 const cors = require('cors')
 
 const app = express()
+let arr = []
 
+app.set('view engine', 'ejs')
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 app.use(cors({origin: true}))
 
 app.get('/', (req, res) => {
-    res.send('So Site')
+    res.render('index')
 })
 
 app.get('/posts', (req,res)=>{
-    const arr = [
-        {
-            text: 'Atatürk',
-            date:'Sonsuz...',
-            url: 'xd'
-        },
-        {
-            text: 'Atilla Han',
-            date: 'Sonsuz...',
-            url: 'awq'
-        },
-        {
-            text: 'xd',
-            date: 'deneme',
-            url: 'test'
-        },
-        {
-            text: 'xd',
-            date: 'deneme',
-            url: 'test'
-        }
-    ]
+
     res.json(arr)
+})
+
+app.get('/dashboard', (req,res)=>{
+    res.render('dashboard',{
+        posts: arr
+    })
+})
+
+app.post('/addPost', (req,res)=>{
+    arr.push({
+        text: req.body.text,
+        date: req.body.date,
+        url: req.body.url
+    })
+
+    res.redirect('http://localhost:5173')
 })
 
 app.listen(80)
