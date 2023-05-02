@@ -1,24 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+
+
 function Posts(){
-    const arr = [
-        {
-        header: 'Atatürk',
-        tarih:'Sonsuz...'
-        },
-        {
-            header: 'Atilla Han',
-            tarih: 'Sonsuz...'
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        const dataFunc = async ()=>{
+            const getData = await axios.get('http://localhost:80/posts')
+            setData(getData.data)
         }
-    ]
+        dataFunc()
+    })
+    
     return(
         <section className='posts'>
             <h1>Posts</h1>
-
             <ul>
-                {arr.map((item, i) => <>
-                    <li>
-                        <span> {item.tarih} </span> 
-                        <a href="#"> {item.header} </a>
+                {data.map((item, i) => <>
+                    <li key={i}>
+                        <span> {item.date} </span> 
+                        <a href={`${item.url}`}> {item.text} </a>
                     </li>
                 </>)}
             </ul>
