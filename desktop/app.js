@@ -10,7 +10,8 @@ app.on('ready', ()=>{
         width: 800,
         height: 550
     })
-    mainWindow.setMinimumSize(220, 140);
+    mainWindow.setMinimumSize(380, 140);
+    mainWindow.setMaximumSize(920, 540)
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, "pages/main.html"),
         protocol: "file:"

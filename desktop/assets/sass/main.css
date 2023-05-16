@@ -79,9 +79,81 @@ body {
 .App .WindowBox main {
   flex: 90%;
   padding: 1.7rem;
+  padding-top: 50px;
 }
 @media only screen and (max-height: 200px) {
   .App .WindowBox main {
     padding-top: 50px;
   }
+}
+.App .WindowBox main header h1 {
+  font-size: 2em;
+  color: #2bbc8a;
+}
+.App .WindowBox main header h2 {
+  margin-top: 0.6em;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #666;
+}
+.App .WindowBox main .about {
+  margin-top: 3em;
+}
+.App .WindowBox main .about h1 {
+  font-size: 1.3em;
+  color: #2bbc8a;
+}
+.App .WindowBox main .about p {
+  margin-top: 1em;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  color: #c9cacc;
+  max-width: 500px;
+}
+.App .WindowBox main .about p a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+}
+.App .WindowBox main .about p a:visited {
+  cursor: pointer;
+  border-color: #1d1f21;
+}
+.App .WindowBox main .about p a:hover {
+  cursor: pointer;
+  border-color: #db7093;
+}
+.App .WindowBox main .posts {
+  margin-top: 2em;
+}
+.App .WindowBox main .posts h1 {
+  font-size: 1.3em;
+  color: #2bbc8a;
+}
+.App .WindowBox main .posts ul {
+  margin-top: 0.5em;
+  list-style-type: none;
+}
+.App .WindowBox main .posts ul li {
+  font-size: 0.9em;
+}
+.App .WindowBox main .posts ul li a {
+  text-decoration: none;
+  color: #c9cacc;
+  border-bottom-width: 1px;
+  border-bottom-color: #c9cacc;
+  border-bottom-style: solid;
+}
+.App .WindowBox main .posts ul li a:visited {
+  cursor: pointer;
+  border-color: #1d1f21;
+}
+.App .WindowBox main .posts ul li a:hover {
+  cursor: pointer;
+  border-color: #db7093;
+}
+.App .WindowBox main .posts ul li span {
+  color: #666;
 }/*# sourceMappingURL=main.css.map */

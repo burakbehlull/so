@@ -16,6 +16,34 @@
     }
 }
 
+@mixin titleText($size){
+    font-size: $size;
+    color: #2bbc8a;
+}
+
+@mixin text($size, $mt){
+    margin-top: $mt;
+    letter-spacing: 1px;
+    font-size: $size;
+    color: #c9cacc;
+}
+
+@mixin aTemplate($btcColor){
+    border-bottom-width: 1px;
+    border-bottom-color: $btcColor;
+    border-bottom-style: solid;
+
+    &:visited{
+        cursor: pointer;
+        border-color: #1d1f21;
+    }
+
+    &:hover{
+        cursor: pointer;
+        border-color: #db7093;
+    }
+}
+
 body{
     background-color: $boxColor;
     font-family: 'Oxygen Mono';
@@ -62,8 +90,61 @@ body{
         main{
             flex: 90%;
             padding: 1.7rem;
+            padding-top: 50px;
             @media only screen and (max-height: 200px){
                 padding-top: 50px;
+            }
+
+            header{
+    
+                h1{
+                    @include titleText(2em);
+                }
+                h2{
+                    margin-top: 0.6em;
+                    font-weight: 600;
+                    font-size: .9em;
+                    color: #666;
+                }
+            }
+            .about{
+                margin-top: 3em;
+                h1{
+                    @include titleText(1.3em);
+                }
+                p{
+                    @include text(.8em, 1em);
+                    max-width: 500px;
+            
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        @include aTemplate(white);
+                    }
+                }
+            }
+
+            .posts{
+                margin-top: 2em;
+                h1{
+                    @include titleText(1.3em);
+                }
+                ul{
+                    margin-top: .5em;
+                    list-style-type: none;
+                    li{
+                        font-size: .9em;
+                        a{
+                            $colors: #c9cacc;
+                            text-decoration: none;
+                            color: $colors;
+                            @include aTemplate($colors);
+                        }
+                        span{
+                            color: #666;
+                        }
+                    }
+                }
             }
         }
     }
