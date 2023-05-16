@@ -1,0 +1,17 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "electron": "^4.2.12",
+    "nugget": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "electron ."
+  },
+  "keywords": [],
+  "author": "Burak A. <burakyabgu@gmail.com>",
+  "license": "MIT"
+}
