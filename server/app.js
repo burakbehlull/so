@@ -1,5 +1,9 @@
 const express = require('express')
 const cors = require('cors')
+const mongoose = require('mongoose')
+
+const Post = require('./models/Post')
+
 
 const app = express()
 let arr = []
@@ -31,7 +35,19 @@ app.post('/addPost', (req,res)=>{
         url: req.body.url
     })
 
-    res.redirect('http://localhost:5173')
+    res.redirect('/')
+})
+
+app.delete('deletePost', async (req,res)=>{
+    try {
+        await Post.findOneAndRemove(req.body)
+        res.status(200).redirect('/')
+    } catch(err){
+        res.status(404).json({
+            status: "fail",
+            error: err
+        })
+    }
 })
 
 app.listen(80)

@@ -9,11 +9,22 @@
     <body>
         <h1>Dashboard</h1>
 
+        <h3>Add Post: </h3>
         <form action="/addPost" method="POST">
             <input type="text" name="text">
             <input type="text" name="date">
             <input type="text" name="url">
             <button type="submit">Ekle</button>
         </form>
+
+        <h3>Delete Post: </h3>
+        <form action="/deletePost" method="POST">
+            <input type="text" name="text">
+            <input type="text" name="date">
+            <input type="text" name="url">
+            <button type="submit">Ekle</button>
+        </form>
+
+
     </body>
 </html>
