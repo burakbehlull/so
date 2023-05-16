@@ -30,8 +30,16 @@ app.get('/', (req, res) => {
 })
 
 app.get('/posts', (req,res)=>{
+    try{
+        const posts = Post.find()
+        res.status(200).json(posts)
 
-    res.json(arr)
+    } catch(err){
+        res.status(404).json({
+            status: "fail",
+            error: err
+        })
+    }
 })
 
 app.get('/dashboard', (req,res)=>{
