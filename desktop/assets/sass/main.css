@@ -145,6 +145,7 @@ body {
   border-bottom-width: 1px;
   border-bottom-color: #c9cacc;
   border-bottom-style: solid;
+  margin-left: 10px;
 }
 .App .WindowBox main .posts ul li a:visited {
   cursor: pointer;

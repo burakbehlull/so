@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: 1.2rem;
+}
+
+html {
+  background-color: #1d1f21;
+  font-family: "Oxygen Mono";
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3em;
+}
+@media only screen and (max-width: 480px) {
+  .App {
+    padding-top: 13em;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .App {
+    padding-top: 4em;
+  }
+}
+.App .windowBox {
+  background-color: #273238;
+  width: 75vw;
+  height: 83vh;
+}
+@media only screen and (max-width: 480px) {
+  .App .windowBox {
+    height: 62vh;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .App .windowBox {
+    height: 80vh;
+  }
+}
+.App .windowBox nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 16px;
+  gap: 6px;
+}
+.App .windowBox nav ul li:nth-child(1) {
+  border-radius: 20px;
+  background: #FA5B55;
+  width: 10px;
+  height: 10px;
+  -webkit-transition: all 500ms ease;
+}
+.App .windowBox nav ul li:nth-child(1):hover {
+  padding: 9px;
+  cursor: pointer;
+}
+.App .windowBox nav ul li:nth-child(2) {
+  border-radius: 20px;
+  background: #FCBE2D;
+  width: 10px;
+  height: 10px;
+  -webkit-transition: all 500ms ease;
+}
+.App .windowBox nav ul li:nth-child(2):hover {
+  padding: 9px;
+  cursor: pointer;
+}
+.App .windowBox nav ul li:nth-child(3) {
+  border-radius: 20px;
+  background: #22CE3A;
+  width: 10px;
+  height: 10px;
+  -webkit-transition: all 500ms ease;
+}
+.App .windowBox nav ul li:nth-child(3):hover {
+  padding: 9px;
+  cursor: pointer;
+}
+.App .windowBox main {
+  padding: 6px 30px;
+}
+.App .windowBox main header h1 {
+  font-size: 1.8em;
+  color: #2bbc8a;
+}
+.App .windowBox main header h2 {
+  margin-top: 0.6em;
+  font-weight: 600;
+  font-size: 0.7em;
+  color: #666;
+}
+.App .windowBox main .about {
+  margin-top: 3em;
+}
+.App .windowBox main .about h1 {
+  font-size: 1em;
+  color: #2bbc8a;
+}
+.App .windowBox main .about p {
+  margin-top: 1em;
+  letter-spacing: 1px;
+  font-size: 0.7em;
+  color: #c9cacc;
+  max-width: 500px;
+}
+.App .windowBox main .about p a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  border-bottom-style: solid;
+}
+.App .windowBox main .about p a:visited {
+  cursor: pointer;
+  border-color: #1d1f21;
+}
+.App .windowBox main .about p a:hover {
+  cursor: pointer;
+  border-color: #db7093;
+}
+.App .windowBox main .posts {
+  margin-top: 2em;
+}
+.App .windowBox main .posts h1 {
+  font-size: 1em;
+  color: #2bbc8a;
+}
+.App .windowBox main .posts ul {
+  margin-top: 0.5em;
+  list-style-type: none;
+}
+.App .windowBox main .posts ul li {
+  font-size: 0.9em;
+}
+.App .windowBox main .posts ul li a {
+  text-decoration: none;
+  color: #c9cacc;
+  border-bottom-width: 1px;
+  border-bottom-color: #c9cacc;
+  border-bottom-style: solid;
+}
+.App .windowBox main .posts ul li a:visited {
+  cursor: pointer;
+  border-color: #1d1f21;
+}
+.App .windowBox main .posts ul li a:hover {
+  cursor: pointer;
+  border-color: #db7093;
+}
+.App .windowBox main .posts ul li span {
+  color: #666;
+}/*# sourceMappingURL=App.css.map */

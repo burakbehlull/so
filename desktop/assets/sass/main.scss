@@ -135,10 +135,11 @@ body{
                     li{
                         font-size: .9em;
                         a{
-                            $colors: #c9cacc;
+                            
                             text-decoration: none;
-                            color: $colors;
-                            @include aTemplate($colors);
+                            color: #c9cacc;
+                            @include aTemplate(#c9cacc);
+                            margin-left: 10px;
                         }
                         span{
                             color: #666;
