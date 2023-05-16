@@ -11,19 +11,30 @@
 
         <h3>Add Post: </h3>
         <form action="/addPost" method="POST">
+            <label for="text">Baslik: </label>
             <input type="text" name="text">
-            <input type="text" name="date">
+            <label for="url">Link: </label>
             <input type="text" name="url">
             <button type="submit">Ekle</button>
         </form>
 
         <h3>Delete Post: </h3>
-        <form action="/deletePost" method="POST">
-            <input type="text" name="text">
-            <input type="text" name="date">
-            <input type="text" name="url">
-            <button type="submit">Ekle</button>
-        </form>
+        <% if (posts) { %>
+            <ul>
+                <% for (let post of posts) { %>
+                    <li><%= post.text %> 
+                        <form action="/deletePost" method="POST">
+                            <input type="hidden" name="text" value="<%= post.text %>">
+                            <button type="submit">x</button>
+                        </form>
+                    </li>
+                <% } %>
+            </ul>
+        <% } else { %>
+            <p>Post yok</p>
+        <% } %>
+          
+
 
 
     </body>

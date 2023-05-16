@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.get('/posts', (req,res)=>{
     try{
-        const posts = Post.find()
+        const posts = Post.find({})
         res.status(200).json(posts)
 
     } catch(err){
@@ -42,21 +42,22 @@ app.get('/posts', (req,res)=>{
     }
 })
 
-app.get('/dashboard', (req,res)=>{
+app.get('/dashboard', async (req,res)=>{
+    let posts = await Post.find({})
     res.render('dashboard',{
-        posts: arr
+        posts: posts
     })
 })
 
 app.post('/addPost', async (req,res)=>{
     await Post.create(req.body)
-    res.status(200).redirect('/')
+    res.status(200).redirect('/dashboard')
 })
 
-app.delete('/deletePost', async (req,res)=>{
+app.post('/deletePost', async (req,res)=>{
     try {
         await Post.findOneAndRemove(req.body)
-        res.status(200).redirect('/')
+        res.status(200).redirect('/dashboard')
     } catch(err){
         res.status(404).json({
             status: "fail",
