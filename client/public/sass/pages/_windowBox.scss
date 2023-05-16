@@ -2,6 +2,13 @@
     background-color: $boxColor;
     width: 75vw;
     height: 83vh;
+    @media only screen and (max-width: 480px){
+        height: 62vh;
+    }
+
+    @media only screen and (max-width: 375px){
+        height: 80vh;
+    }
     @import 'Navbar';
     main{
         padding: 6px 30px;

@@ -12,6 +12,13 @@ html{
     justify-content: center;
     align-items: center;
     padding-top: 3em;
+    @media only screen and (max-width: 480px){
+        padding-top: 13em;
+    }
+
+    @media only screen and (max-width: 375px){
+        padding-top: 4em;
+    }
     @import '../public/sass/pages/windowBox';
 }
 

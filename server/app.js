@@ -29,9 +29,9 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.get('/posts', (req,res)=>{
+app.get('/posts', async (req,res)=>{
     try{
-        const posts = Post.find({})
+        const posts = await Post.find({})
         res.status(200).json(posts)
 
     } catch(err){
