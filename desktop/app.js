@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 const url = require('url')
 const path = require('path')
 
@@ -15,4 +15,9 @@ app.on('ready', ()=>{
         pathname: path.join(__dirname, "pages/main.html"),
         protocol: "file:"
     }))
+
+    ipcMain.on('close', ()=>{
+        mainWindow.close()
+        mainWindow = null;
+    })
 })
