@@ -5,7 +5,7 @@ export default function Header(){
         <>
             <View>
                 <Text>
-                    Header Component
+                    Posts Component
                 </Text>
             </View>
         </>
