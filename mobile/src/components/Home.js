@@ -4,10 +4,7 @@ export default function Home(){
     return(
         <>
             <View>
-                <Text>
-                    Home Component
-
-                </Text>
+                <Text>HOME</Text>
             </View>
         </>
     )

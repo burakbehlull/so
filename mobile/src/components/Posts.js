@@ -4,9 +4,8 @@ export default function Header(){
     return(
         <>
             <View>
-                <Text>
-                    Posts Component
-                </Text>
+                <Text>Posts Component</Text>
+                
             </View>
         </>
     )
