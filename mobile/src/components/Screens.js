@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './Home';
 import Posts from './Posts';
 
+import {mainStyle} from '../styles'
+
 import {Image} from 'react-native'
 
 const Tab = createBottomTabNavigator();
@@ -13,7 +15,7 @@ export default function Screens(){
             <Tab.Navigator screenOptions={{
                 tabBarShowLabel: false,
                 headerShown: false,
-            }}>
+            }} sceneContainerStyle={mainStyle.container}>
                 <Tab.Screen name="Anasayfa" component={Home}
                 options={{
                     headerTitle:'Anasayfa',
